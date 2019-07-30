@@ -6,7 +6,6 @@ import store from '@/store'
 import '@/service/index.js'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/iconfont/iconfont.css'
-
 Vue.use(ElementUI, {
   size: 'medium'
 })

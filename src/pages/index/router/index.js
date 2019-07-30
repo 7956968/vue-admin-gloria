@@ -39,7 +39,7 @@ import nestedRouter from './modules/nested'
  * all roles can be accessed
  */
 export const constantRoutes = [
-  {
+  /* {
     path: '/redirect',
     component: Layout,
     hidden: true,
@@ -49,7 +49,7 @@ export const constantRoutes = [
         component: () => import('@/pages/index/views/redirect/index')
       }
     ]
-  },
+  }, */
   {
     path: '/404',
     component: () => import('@/pages/index/views/error-page/404'),
@@ -61,7 +61,7 @@ export const constantRoutes = [
     hidden: true
   },
   {
-    path: '/index',
+    path: '',
     component: Layout,
     redirect: 'dashboard',
     children: [
