@@ -1,12 +1,12 @@
 'use strict'
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
-
+const SpritesmithPlugin = require('webpack-spritesmith')
 function resolve (dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || 'vue Admin' // page title
+const name = defaultSettings.title || 'Vue Admin happyGloria' // page title
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run
@@ -76,6 +76,7 @@ module.exports = {
       }
     }
   },
+  // 配置loader
   chainWebpack (config) {
     config.plugins.delete('preload') // TODO: need test
     config.plugins.delete('prefetch') // TODO: need test
@@ -107,7 +108,7 @@ module.exports = {
         return options
       })
       .end()
-
+    // config.plugin('SpritesmithPlugin')
     config
       // https://webpack.js.org/configuration/devtool/#development
       .when(process.env.NODE_ENV === 'development', config =>
